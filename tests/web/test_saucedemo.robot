@@ -1,6 +1,5 @@
 *** Settings ***
 Resource          ../../resources/config.robot
-Resource          ../../resources/variables/test_saucedemo_variables.robot
 
 Test Setup        Open And Maximize Browser For SauceDemo
 Test Teardown     Run Keywords    Capture Page On Failure    AND    Close Browser All
