@@ -32,3 +32,9 @@ Capture Page On Failure
         Capture Page Screenshot    filename=${full_path}
         Log    Screenshot saved to ${full_path}    WARN
     END
+
+Capture Page Per Test Case
+    [Documentation]    Captures a screenshot for each test case, organizing by file and test case name.
+    [Arguments]    ${test_status}    ${test_name}    ${file_name}
+    Run Keyword If    '${test_status}' == 'FAIL'    Create Directory    results/screenshots/${file_name}
+    Run Keyword If    '${test_status}' == 'FAIL'    Capture Page Screenshot    results/screenshots/${file_name}/${test_name}_failure.png
