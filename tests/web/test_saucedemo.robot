@@ -1,16 +1,9 @@
 *** Settings ***
-Library           SeleniumLibrary
-Resource          ../../resources/keywords/saucedemo_keywords.robot
-Resource          ../../resources/common_keywords.robot
+Resource          ../../resources/config.robot
+Resource          ../../resources/variables/test_saucedemo_variables.robot
+
 Test Setup        Open And Maximize Browser For SauceDemo
 Test Teardown     Run Keywords    Capture Page On Failure    AND    Close Browser All
-
-*** Variables ***
-${SAUCEDEMO_URL}    https://www.saucedemo.com
-${BROWSER}          chrome
-${VALID_USERNAME}   standard_user
-${VALID_PASSWORD}   secret_sauce
-${LOGIN_ERROR_MESSAGE_XPATH}    xpath=//h3[@data-test="error"]
 
 *** Test Cases ***
 Open SauceDemo and Verify Landing Page
