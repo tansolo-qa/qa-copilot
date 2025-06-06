@@ -22,27 +22,17 @@ tests/                 # Test cases
 - ChromeDriver (must match the version of your installed Google Chrome browser)
   - You can download ChromeDriver from [ChromeDriver Downloads](https://sites.google.com/chromium.org/driver/).
   - Ensure ChromeDriver is added to your system's PATH.
+- Google Chrome for Testing
+  - Download `Google Chrome for Testing.app` from the [Chrome for Testing](https://googlechromelabs.github.io/chrome-for-testing/) page.
+  - Move the downloaded `.app` file to your `Applications` folder.
+  - If macOS blocks the app with a "damaged and can't be opened" error:
+    1. Open Terminal and run:
+       ```bash
+       xattr -rd com.apple.quarantine "/Applications/Google Chrome for Testing.app"
+       ```
+    2. Open the app again from the `Applications` folder.
 
 ## Setup Instructions
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/tansolo-qa/qa-copilot.git
-   ```
-2. Navigate to the project directory:
-   ```bash
-   cd poc-vibe-robot/qa-copilot
-   ```
-3. Create and activate a virtual environment:
-   ```bash
-   python -m venv venv
-   .\venv\Scripts\activate
-   ```
-4. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-## Setup Instructions for macOS
 1. Clone the repository:
    ```bash
    git clone https://github.com/tansolo-qa/qa-copilot.git
