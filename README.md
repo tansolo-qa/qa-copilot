@@ -16,15 +16,17 @@ tests/                 # Test cases
         open_google.robot  # Test script to open Google in Chrome
 ```
 
-## Prerequisites
+## ## Prerequisites
 - Python 3.7 or higher
-- Google Chrome browser
-- ChromeDriver (compatible with your Chrome version)
+- Google Chrome browser (latest stable version recommended)
+- ChromeDriver (must match the version of your installed Google Chrome browser)
+  - You can download ChromeDriver from [ChromeDriver Downloads](https://sites.google.com/chromium.org/driver/).
+  - Ensure ChromeDriver is added to your system's PATH.
 
 ## Setup Instructions
 1. Clone the repository:
    ```bash
-   git clone https://github.com/tansolo-qa/poc.git
+   git clone https://github.com/tansolo-qa/qa-copilot.git
    ```
 2. Navigate to the project directory:
    ```bash
@@ -40,22 +42,22 @@ tests/                 # Test cases
    pip install -r requirements.txt
    ```
 
-## Setup Instructions for Windows OS
+## Setup Instructions for macOS
 1. Clone the repository:
-   ```powershell
-   git clone https://github.com/tansolo-qa/poc.git
+   ```bash
+   git clone https://github.com/tansolo-qa/qa-copilot.git
    ```
 2. Navigate to the project directory:
-   ```powershell
+   ```bash
    cd poc-vibe-robot/qa-copilot
    ```
 3. Create and activate a virtual environment:
-   ```powershell
-   python -m venv venv
-   .\venv\Scripts\activate
+   ```bash
+   python3 -m venv venv
+   source venv/bin/activate
    ```
 4. Install dependencies:
-   ```powershell
+   ```bash
    pip install -r requirements.txt
    ```
 
