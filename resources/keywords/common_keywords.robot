@@ -33,14 +33,8 @@ Capture Page On Failure
         Log    Screenshot saved to ${full_path}    WARN
     END
 
-Capture Page Per Test Case
-    [Documentation]    Captures a screenshot for each test case, organizing by file and test case name.
-    [Arguments]    ${test_status}    ${test_name}    ${file_name}
-    Run Keyword If    '${test_status}' == 'FAIL'    Create Directory    results/screenshots/${file_name}
-    Run Keyword If    '${test_status}' == 'FAIL'    Capture Page Screenshot    results/screenshots/${file_name}/${test_name}_failure.png
-
 Open Google in Chrome
-    [Documentation]    Opens Google in Chrome and maximizes the browser window.
-    Open Browser    https://www.google.com    chrome
+    [Documentation]    Opens Google in the configured browser (${BROWSER}) and maximizes the browser window.
+    Open Browser    https://www.google.com    ${BROWSER}
     Maximize Browser Window
     Wait Until Page Contains    Google
