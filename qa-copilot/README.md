@@ -24,7 +24,7 @@ tests/                 # Test cases
 ## Setup Instructions
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/tansolo-qa/poc.git
    ```
 2. Navigate to the project directory:
    ```bash
@@ -40,9 +40,33 @@ tests/                 # Test cases
    pip install -r requirements.txt
    ```
 
+## Setup Instructions for Windows OS
+1. Clone the repository:
+   ```powershell
+   git clone https://github.com/tansolo-qa/poc.git
+   ```
+2. Navigate to the project directory:
+   ```powershell
+   cd poc-vibe-robot/qa-copilot
+   ```
+3. Create and activate a virtual environment:
+   ```powershell
+   python -m venv venv
+   .\venv\Scripts\activate
+   ```
+4. Install dependencies:
+   ```powershell
+   pip install -r requirements.txt
+   ```
+
 ## Running Tests
 ### Web Tests
-To run the web test cases:
+To run a specific web test file (e.g., `test_saucedemo.robot`):
+```bash
+robot --outputdir results tests/web/test_saucedemo.robot
+```
+
+To run all web tests in the `tests/web/` directory:
 ```bash
 robot --outputdir results tests/web/
 ```
@@ -61,33 +85,3 @@ You can also open the [dashboard](results/dashboard.html) for a quick overview.
 
 ## License
 This project is licensed under the MIT License.
-
-## Prerequisites
-@@ -38,7 +38,13 @@
-## Running Tests
-### Web Tests
-To run a specific web test file (e.g., `test_saucedemo.robot`):
-+```bash
-+robot --outputdir results tests/web/test_saucedemo.robot
-+```
-+
-+To run all web tests in the `tests/web/` directory:
-```bash
--robot --outputdir results tests/web/open_google.robot
-+robot --outputdir results tests/web/
-
-**Key changes and why:**
-
-1.  **Project Structure:**
-    *   Updated `resources/` to show `common_keywords.robot` as an example, which is more accurate to your current setup.
-    *   Added `results/screenshots/` to show where the failure screenshots will be stored, making it clear how they are organized.
-    *   Updated the example web test file from `open_google.robot` to `test_saucedemo.robot` as it's the more prominent example now.
-
-2.  **Running Tests:**
-    *   Added a specific example for running `test_saucedemo.robot`.
-    *   Included a command for running all tests within the `tests/web/` directory, which is a common use case.
-
-3.  **Viewing Results:**
-    *   Added a line explaining where to find the screenshots for failed tests and their naming convention. This is a crucial piece of information given the new `Capture Page On Failure` keyword.
-
-These changes should make your `README.md` more accurately reflect your project's current capabilities and structure, making it more helpful for anyone (including your future self!) looking at the project.
